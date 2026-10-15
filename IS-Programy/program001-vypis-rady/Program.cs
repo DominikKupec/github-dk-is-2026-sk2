@@ -24,5 +24,5 @@ while (again.ToLower() == "a" )
     Console.WriteLine("Jakoukoliv jinou klávesu programu ukončíte.");
     Console.WriteLine();
     Console.Write("Chcete spustit program znovu? ");
-    again = Console.ReadLine() ?? "";dot
+    again = Console.ReadLine() ?? "";
 }
