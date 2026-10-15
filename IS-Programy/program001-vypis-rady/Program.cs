@@ -13,8 +13,14 @@
  //ToLower() převede vstup na malá písmena, takže program bude pokračovat při zadávaní "a" tak i "A"
 while (again.ToLower() == "a" )
 {
+    Console.Clear();
+    Console.WriteLine("**********************************************************");
+    Console.WriteLine("************************vypis rady************************");
+    Console.WriteLine("**********************************************************");
+    Console.WriteLine("***********************Dominik Kupec**********************");
+    Console.WriteLine("**********************************************************");
+    Console.WriteLine("**********************************************************");
     
-
 
     //Dotaz na opakování
     Console.WriteLine();
