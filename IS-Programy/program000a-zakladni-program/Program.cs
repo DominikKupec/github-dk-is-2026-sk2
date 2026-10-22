@@ -41,10 +41,10 @@ while (again.ToLower() == "a" )
     }
 
 
-    // rekapitulace zadaných hodnot
+    // rekapitulace zadaných hodnot d
     Console.WriteLine();
     Console.WriteLine("================================");
-    
+
     
     //vypis zadaných hodnot do jednoho řádku
     Console.WriteLine($"První číslo: {aaa}; další číslo: {bbb}; ");
