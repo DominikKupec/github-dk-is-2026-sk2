@@ -22,14 +22,11 @@ while (again.ToLower() == "a" )
     Console.WriteLine("**********************************************************");
     Console.WriteLine("**********************************************************");
     
-    //vstup počáteční hodnoty - špatně řešený
-    //Console.Write("Zadejte první číslo řady: ");
-    //int first = int.Parse(Console.ReadLine());
     
     //vstup počáteční hodnoty - správně řešený
     Console.Write("Zadejte první číslo řady(celé číslo): ");
-    int first;
-    while(!int.TryParse(Console.ReadLine(), out first))
+    int aaa;
+    while(!int.TryParse(Console.ReadLine(), out aaa))
     {
         Console.Write("Nezadali jste celé číslo! Zadejte první číslo řady znovu (celé číslo): ");
     }
@@ -37,62 +34,23 @@ while (again.ToLower() == "a" )
 
     //vstup koncové hodnoty - správně řešený
     Console.Write("Zadejte poslední číslo řady(celé číslo): ");
-    int last;
-    while(!int.TryParse(Console.ReadLine(), out last))
+    int bbb;
+    while(!int.TryParse(Console.ReadLine(), out bbb))
     {
         Console.Write("Nezadali jste celé číslo! Zadejte poslední číslo řady znovu (celé číslo): ");
-    }
-
-
-    //vstup diference s kontrolou kladné hodnoty
-    Console.Write("Zadejte diferenci (kladné celé číslo): "); 
-    int step;
-    while(!int.TryParse(Console.ReadLine(), out step) || step <= 0)
-    {
-        Console.Write("Diference musí být kladné celé číslo! Zadejte diferenci znovu (kladné celé číslo): ");
     }
 
 
     // rekapitulace zadaných hodnot
     Console.WriteLine();
     Console.WriteLine("================================");
-    //vypis zadaných hodnot pod sebou
-    //Console.WriteLine($"Prvni číslo: {first}");
-    //Console.WriteLine($"Poslední číslo: {last}");
-    //Console.WriteLine($"Diference(krok): {step}");
     
     
     //vypis zadaných hodnot do jednoho řádku
-    Console.WriteLine($"První číslo: {first}; Poslední číslo: {last}; Diference(krok): {step}");
+    Console.WriteLine($"První číslo: {aaa}; další číslo: {bbb}; ");
     Console.WriteLine("================================");
     Console.WriteLine();
-
-    //jádro algoritmu pro výpis řady
-    Console.WriteLine("Výpis číselné řady: ");
     
-    if(first <= last)
-    {
-        int current = first;
-        while(current <= last){
-            //čísla řady vypsaná pod sebou
-            Console.WriteLine(current);
-            //čísla řady vypsaná vedle sebe
-            Console.Write($"{current};");
-            //current = current + step;
-            // předchozí řádek lze napsat stručněji
-            current += step;
-
-        }  
-
-    }
-    else
-    {
-        Console.WriteLine("Řadu nelze vypsat!");
-        Console.WriteLine("První číslo je větší než poslední.");
-        Console.WriteLine("Tento program umí vypsat pouze vzestuupnou řadu (od menšího k většímu).");
-
-    }
-
 
     //Dotaz směrem k uživateli na opakování
     Console.WriteLine();
