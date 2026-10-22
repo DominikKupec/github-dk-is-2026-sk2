@@ -41,7 +41,7 @@ while (again.ToLower() == "a" )
     }
 
 
-    // rekapitulace zadaných hodnot d
+    // rekapitulace zadaných hodnot 
     Console.WriteLine();
     Console.WriteLine("================================");
 
