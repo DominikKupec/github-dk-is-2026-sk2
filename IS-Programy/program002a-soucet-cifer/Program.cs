@@ -70,17 +70,18 @@ while (again.ToLower() == "a" )
         // jádro problému - matematiký rozklad čísla pomocí cyklu
         while (number > 0)
         {
-           
+           for (; number > 0; number = number / 10){ 
             //operátoru % se říká modulo a slouží k určení zbytku po celočíselném dělení
             digit = number % 10;  //modulo 10 nám získá poslední číslici
             sum = sum + digit;    //přičtení číslice k celkovému součtu
-            number = number / 10; //celočíselné dělení 10kou odstraní poslední číslici
+            
             soucin = soucin * digit;
 
-            Console.WriteLine($"aktuální číslice (zbytek): {digit}");
-            Console.WriteLine($"číslo po odříznutí aktuální číslice: {number}");
-            Console.WriteLine($"aktuální hodnota ciferného součtu: {sum}");
-        }    
+           // Console.WriteLine($"aktuální číslice (zbytek): {digit}");
+           // Console.WriteLine($"číslo po odříznutí aktuální číslice: {number}");
+           // Console.WriteLine($"aktuální hodnota ciferného součtu: {sum}");
+        }  
+        }  
     }
 
     // 5. výpis výsledků
