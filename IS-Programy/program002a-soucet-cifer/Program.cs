@@ -45,8 +45,56 @@ while (again.ToLower() == "a" )
     Console.WriteLine("================================");
     Console.WriteLine();
     
+    // 1. příprava pomocných proměnných pro výpočet
+    int numberBackup = number; //záloha původního čísla pro závěrečný výpis 
+    int sum = 0;               //neutrální hodnotou pro sčítání je 0 
+    int digit;  
+    int soucin = 1;               //proměnná pro uložení právě zpracovávané číslice
 
-    //Dotaz směrem k uživateli na opakování
+    // 2. ošetření záporných čísel (znaménko nemá vliv na součet cifer)
+    if (number < 0)
+    {
+        number = -number;
+    }
+
+    // 3. zvláštní případ
+    if (number == 0)
+    {
+        sum = 0;
+    }
+    else
+    {
+        
+        Console.WriteLine("průběh rozkladu čísla na jednotlivé číslice (z prava do leva)");
+
+        // jádro problému - matematiký rozklad čísla pomocí cyklu
+        while (number > 0)
+        {
+           
+            //operátoru % se říká modulo a slouží k určení zbytku po celočíselném dělení
+            digit = number % 10;  //modulo 10 nám získá poslední číslici
+            sum = sum + digit;    //přičtení číslice k celkovému součtu
+            number = number / 10; //celočíselné dělení 10kou odstraní poslední číslici
+            soucin = soucin * digit;
+
+            Console.WriteLine($"aktuální číslice (zbytek): {digit}");
+            Console.WriteLine($"číslo po odříznutí aktuální číslice: {number}");
+            Console.WriteLine($"aktuální hodnota ciferného součtu: {sum}");
+        }    
+    }
+
+    // 5. výpis výsledků
+    Console.WriteLine();
+    Console.WriteLine();
+    Console.WriteLine();
+    Console.WriteLine("================================");
+    Console.WriteLine($"Ciferný součet čísla {numberBackup} je: {sum}");
+    Console.WriteLine($"Součin číslic čísla {numberBackup} je: {soucin}");
+    Console.WriteLine("================================");
+    Console.WriteLine();
+
+    
+        //Dotaz směrem k uživateli na opakování
     Console.WriteLine();
     Console.WriteLine();
 
