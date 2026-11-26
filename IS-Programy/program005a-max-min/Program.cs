@@ -61,12 +61,17 @@ while (again.ToLower() == "a" )
     Console.WriteLine();
     
     //jádro konkrétního algoritmu
+ 
+    //hledání maxima a minima a jejich úmístění. 
+   
+    
 
     //deklarace pole a alokace v paměti
-    int[] myRandNumbs = new int[n];
     
-    //inicializace generátoru náhodných čísel
+       int[] myRandNumbs = new int[n];
     Random myRandNumb = new Random(); 
+    //inicializace generátoru náhodných čísel
+    
     // Random myRandNumb = new Random(50); // pevný seed pro testovací účely pro stejná čísla. 
     
 
@@ -78,6 +83,42 @@ while (again.ToLower() == "a" )
         Console.WriteLine($"{myRandNumbs[i]}; ");
     }
     //konec jádra konkrétního algortimu
+
+     int max = myRandNumbs[0]; //předpokládáme že nultý prvek je maximum a minimum.
+    int min = myRandNumbs[0]; //předpokládáme že nultý prvek je maximum a minimum.
+
+    int posMax = 0; 
+    int posMin = 0; 
+    
+   
+    for (int i = 1; i < n; i++)
+    {
+        if (myRandNumbs[i] > max)
+        {
+            max = myRandNumbs[i];
+            posMax = i;
+            
+           
+            
+        }
+        if (myRandNumbs[i] < min)
+        {
+            min = myRandNumbs[i];
+            posMin = i;
+           
+        }
+    } 
+    
+    Console.WriteLine();
+    Console.WriteLine("================================");
+    Console.WriteLine($"Maximum je: {max}");
+    Console.WriteLine($"pozice prvního maxima: {posMax}");
+    Console.WriteLine("================================");
+    Console.WriteLine($"Minimum je: {min}");
+    Console.WriteLine($"pozice prvního minima: {posMin}");
+    Console.WriteLine("================================");
+    
+    
 
     //Dotaz směrem k uživateli na opakování
     Console.WriteLine();
