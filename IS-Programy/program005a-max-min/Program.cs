@@ -105,6 +105,7 @@ while (again.ToLower() == "a" )
         {
             min = myRandNumbs[i];
             posMin = i;
+            
            
         }
     } 
@@ -118,11 +119,60 @@ while (again.ToLower() == "a" )
     Console.WriteLine($"pozice prvního minima: {posMin}");
     Console.WriteLine("================================");
     
+        
+
+    if (max >= 3)
+    {
+        //vnější ciklus řídí vykreslování jednotlivých řádků.
+        for (int i = 0; i < max; i++ ){
+            int spaces = 0;
+            int stars = 0;
+        
+        if (i < max/2)
+        {
+            spaces = i;
+            stars = max - (i * 2);
+           
+           
+        }
+        else
+        {
+
+            spaces = max - i - 1;
+            stars = (i * 2) - max + 2;
     
+            
+        }
+        //budeme vykreslovat
+
+        
+    
+    
+
+    //vykreslení úvodních mezer.
+    for (int sp = 0; sp < spaces; sp++)
+    {
+        Console.Write(" ");
+    }
+
+
+    //vykreslení hvězdiček.
+    for (int st = 0; st < stars; st++)
+    {
+        Console.Write("*");
+    }
+
+
+
 
     //Dotaz směrem k uživateli na opakování
     Console.WriteLine();
-   
+    }
+    }
+    else 
+    {
+        Console.WriteLine("Maximum je menší než 3 => nelze vykreslit obrazec");
+    }
 
     Console.WriteLine("Pro opakování programu stiskněte klávesu a. Následně potvrďte klávesou Enter");
     Console.WriteLine("Jakoukoliv jinou klávesu programu ukončíte.");
